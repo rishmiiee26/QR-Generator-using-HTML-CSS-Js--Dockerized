@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  padding: 0 0.625rem;
+  min-height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  background-size: 400% 400%;
+  animation: rotateGradients 4s ease infinite;
+}
+
+.wrapper {
+  height: 17.9rem;
+  width: 100%;
+  max-width: 28.125rem;
+  background: #fff;
+  border-radius: 0.4375rem;
+  padding: 1.5rem;
+  transition: height 0.2s ease;
+  box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.1);
+}
+.wrapper.active {
+  height: unset;
+}
+.wrapper.active .result {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.5s 0.05s ease;
+}
+.wrapper header h1 {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.wrapper header p {
+  margin-top: 0.3rem;
+  color: #575757;
+  font-size: 1rem;
+}
+.wrapper .form {
+  margin: 1.25rem 0 1.5rem;
+}
+.wrapper .form :where(input, button) {
+  width: 100%;
+  height: 3.4rem;
+  border: none;
+  outline: none;
+  border-radius: 0.3rem;
+  transition: 0.1s ease;
+}
+.wrapper .form input {
+  font-size: 1.125rem;
+  padding: 0 1rem;
+  border: 0.06rem solid #999;
+}
+.wrapper .form input:focus {
+  box-shadow: 0 0.18rem 0.375rem rgba(0, 0, 0, 0.13);
+}
+.wrapper .form button {
+  color: #fff;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  font-size: 1.0625rem;
+  background-size: 400% 400%;
+  animation: rotateGradients 4s ease infinite;
+}
+.wrapper .result {
+  opacity: 0;
+  display: flex;
+  border-radius: 0.3125rem;
+  align-items: center;
+  pointer-events: none;
+  justify-content: center;
+  border: 0.0625rem solid #ccc;
+}
+.wrapper .result img {
+  aspect-ratio: 1;
+  width: 100%;
+}
+
+@media (max-width: 430px) {
+  .wrapper {
+    height: 17.2rem;
+    padding: 1.25rem;
+    max-width: 95vw;
+  }
+  .wrapper header p {
+    color: #696969;
+  }
+  .wrapper .form:where(input, button) {
+    height: 3.25rem;
+  }
+  .wrapper .form button {
+    margin-top: 1.25rem;
+  }
+}
+@media (max-width: 363px) {
+  .wrapper {
+    height: 18.7rem;
+  }
+}
+@media (max-width: 263px) {
+  .wrapper {
+    height: 20.3rem;
+  }
+}
+@keyframes rotateGradients {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
